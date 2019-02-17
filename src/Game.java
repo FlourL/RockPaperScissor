@@ -1,5 +1,5 @@
 class Game{
-	WinState winChart[][] = new boolean[3][3];
+	WinState winChart[][] = new WinState[3][3];
 	Game(){
 		// 0 = Rock, 1 = Paper, 2 = Scissor
 		winChart[0][0] = WinState.Tie;
