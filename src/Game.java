@@ -12,8 +12,26 @@ class Game{
 		winChart[2][1] = WinState.Win;
 		winChart[2][2] = WinState.Tie;
 	}
-	public boolean GameResult(int yourChoice, int opponentChoice){
+	public WinState GameResult(int yourChoice, int opponentChoice) {
 		WinState GameResult = winChart[yourChoice][opponentChoice];
-		Return GameResult;
+		return GameResult;
+	}
+	public String OpponentResult(int opponentChoice){
+		String Choice;
+		switch(opponentChoice){
+			case 0:
+				Choice = "Rock";
+				break;
+			case 1:
+				Choice = "Paper";
+				break;
+			case 2:
+				Choice = "Scissor";
+				break;
+			default:
+				Choice = "Something, an error has occured so i don't know what";
+				break;
+		}
+		return Choice;
 	}
 }
